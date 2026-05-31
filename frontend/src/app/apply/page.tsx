@@ -160,7 +160,7 @@ export default function ApplyPage() {
                 <StatusItem 
                   label="Eligibility" 
                   value={state.application?.eligibilityStatus ?? "PENDING"} 
-                  icon={state.application?.eligibilityStatus === "ELIGIBLE" ? CheckCircle : Clock} 
+                  icon={state.application?.eligibilityStatus === "PASSED" ? CheckCircle : Clock}
                 />
                 <StatusItem 
                   label="Documents" 
