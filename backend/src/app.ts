@@ -12,6 +12,29 @@ app.use(express.json());
 app.use("/uploads", express.static(env.uploadDir));
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
+
+// Seed endpoint for production database setup
+app.get("/seed", async (_req, res) => {
+  try {
+    const { seedUsers } = await import("./scripts/seed.js");
+    await seedUsers();
+    res.json({ 
+      message: "Database seeded successfully", 
+      users: [
+        "admin@lms.dev",
+        "sales@lms.dev", 
+        "sanction@lms.dev",
+        "disbursement@lms.dev",
+        "collection@lms.dev",
+        "borrower@lms.dev"
+      ],
+      password: "Password@123"
+    });
+  } catch (error) {
+    console.error("Seeding error:", error);
+    res.status(500).json({ message: "Seeding failed", error: String(error) });
+  }
+});
 app.use("/api/auth", authRouter);
 app.use("/api/borrower", borrowerRouter);
 app.use("/api/dashboard", dashboardRouter);
