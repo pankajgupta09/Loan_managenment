@@ -419,7 +419,7 @@ export default function ApplyPage() {
                       <tr key={index} className="border-b border-neutral-100">
                         <td className="py-2">{new Date(payment.paidAt).toLocaleDateString()}</td>
                         <td className="text-right py-2 font-medium">{formatInr(payment.amount)}</td>
-                        <td className="text-center py-2 font-mono text-xs">{payment.utr}</td>
+                        <td className="text-center py-2 font-mono text-xs">{payment.utrNumber}</td>
                       </tr>
                     ))}
                   </tbody>

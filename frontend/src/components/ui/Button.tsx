@@ -13,6 +13,7 @@ const buttonVariants = cva(
         ghost: "text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200",
         destructive: "bg-error-600 text-white hover:bg-error-700 active:bg-error-800 shadow-sm hover:shadow-md",
         success: "bg-success-600 text-white hover:bg-success-700 active:bg-success-800 shadow-sm hover:shadow-md",
+        warning: "bg-warning-600 text-white hover:bg-warning-700 active:bg-warning-800 shadow-sm hover:shadow-md",
         gradient: "bg-gradient-primary text-white hover:opacity-90 active:opacity-75 shadow-lg hover:shadow-glow",
       },
       size: {

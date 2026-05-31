@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { BadgeCheck, Banknote, HandCoins, ListChecks, RefreshCw, SendHorizontal, Users, TrendingUp, Clock, CheckCircle, XCircle, DollarSign, Calendar } from "lucide-react";
+import { BadgeCheck, Banknote, HandCoins, ListChecks, RefreshCw, SendHorizontal, Users, TrendingUp, Clock, CheckCircle, XCircle, DollarSign, Calendar, User, CreditCard } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { api, formatInr, getStoredUser } from "@/lib/api";
 import type { Application, Loan, Role } from "@/lib/types";
